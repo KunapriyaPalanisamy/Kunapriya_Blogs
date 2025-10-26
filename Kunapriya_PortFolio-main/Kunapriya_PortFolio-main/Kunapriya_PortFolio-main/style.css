@@ -1171,8 +1171,379 @@ html, body {
     width: 80%;
   }
 }
+/* =============================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+   Add these rules to the END of your style.css
+   ============================================= */
 
+/* Tablet and below (1024px) */
+@media (max-width: 1024px) {
+  
+  /* HERO SECTION - Stack everything vertically */
+  .hero {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+  
+  .hero-inner {
+    flex-direction: column;
+    gap: 24px;
+    transform: translateY(0); /* Remove upward shift */
+    text-align: center;
+  }
+  
+  /* Stack name and photo vertically */
+  .hero-image {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .hero-brand {
+    text-align: center;
+    padding-right: 0;
+    font-size: 20px;
+  }
+  
+  .photo-frame img {
+    width: 250px;
+  }
+  
+  /* Text section centered */
+  .hero-text {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .headline {
+    font-size: clamp(24px, 6vw, 40px) !important;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  
+  /* Buttons full-width and stacked */
+  .hero-ctas {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto 0;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  /* ABOUT SECTION */
+  #about {
+    padding: 50px 20px;
+  }
+  
+  #about h2 {
+    font-size: 1.8rem;
+  }
+  
+  #about .bio {
+    font-size: 0.95rem;
+  }
+  
+  /* SERVICES - Stack cards vertically */
+  .services-grid {
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .service-card {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+    min-height: 200px;
+  }
+  
+  .service-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .service-card h3 {
+    font-size: 1rem;
+  }
+  
+  /* BLOG LISTING */
+  .blog-listing {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .blog-card {
+    width: 100%;
+  }
+  
+  /* CONTACT FORM */
+  .contact-card .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .contact-card {
+    padding: 20px 16px;
+  }
+  
+  /* HERO FRAMED (Blog pages) */
+  .hero-framed {
+    min-height: 50vh;
+    padding: 30px 20px;
+  }
+  
+  .hero-overlay-card {
+    padding: 30px 24px;
+    max-width: 90%;
+  }
+  
+  .hero-overlay-card .headline {
+    font-size: clamp(24px, 6vw, 36px) !important;
+  }
+  
+  /* BLOG POST */
+  .blog-post {
+    padding: 30px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .blog-post h2 {
+    font-size: 1.4rem;
+  }
+}
 
+/* Mobile phones (768px and below) */
+@media (max-width: 768px) {
+  
+  body {
+    font-size: 15px;
+  }
+  
+  /* HERO - Further optimize for phones */
+  .hero {
+    padding: 20px 16px;
+  }
+  
+  .hero-brand {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+  .photo-frame img {
+    width: 200px;
+  }
+  
+  .headline {
+    font-size: clamp(20px, 7vw, 32px) !important;
+    margin-bottom: 12px;
+  }
+  
+  .subline,
+  .mission {
+    font-size: 14px;
+  }
+  
+  .hero-ctas {
+    max-width: 100%;
+  }
+  
+  .hero-ctas .btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+  
+  /* ABOUT */
+  #about {
+    padding: 40px 16px;
+  }
+  
+  #about h2 {
+    font-size: 1.6rem;
+  }
+  
+  #about .intro {
+    font-size: 1rem;
+  }
+  
+  #about .bio {
+    font-size: 0.9rem;
+  }
+  
+  /* SERVICES */
+  .service-card {
+    padding: 16px;
+    min-height: 180px;
+  }
+  
+  .service-card img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .service-card h3 {
+    font-size: 0.95rem;
+  }
+  
+  /* BLOG LISTING */
+  .blog-listing {
+    padding: 16px;
+    margin: 40px auto;
+  }
+  
+  .blog-card img {
+    height: 160px;
+  }
+  
+  .blog-card-content h2 {
+    font-size: 1.1rem;
+  }
+  
+  .blog-card-content p {
+    font-size: 0.9rem;
+  }
+  
+  /* CONTACT */
+  .contact-card {
+    padding: 18px 14px;
+  }
+  
+  .contact-card label {
+    font-size: 12px;
+  }
+  
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  
+  /* MODAL */
+  .modal-content {
+    width: 90%;
+    padding: 24px 20px;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+  
+  /* BLOG POST */
+  .blog-post {
+    padding: 24px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .blog-post h2 {
+    font-size: 1.3rem;
+  }
+  
+  .pull-quote {
+    font-size: 0.85rem;
+  }
+  
+  /* FOOTER */
+  .site-footer {
+    text-align: center;
+    padding: 16px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small phones (480px and below) */
+@media (max-width: 480px) {
+  
+  .hero-brand {
+    font-size: 16px;
+  }
+  
+  .photo-frame img {
+    width: 180px;
+  }
+  
+  .headline {
+    font-size: clamp(18px, 8vw, 28px) !important;
+    word-break: break-word;
+  }
+  
+  .hero-ctas .btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  #about h2 {
+    font-size: 1.4rem;
+  }
+  
+  #about .bio {
+    font-size: 0.85rem;
+  }
+  
+  .service-card {
+    min-height: 160px;
+  }
+  
+  .blog-card img {
+    height: 140px;
+  }
+  
+  .blog-post {
+    padding: 20px 12px;
+  }
+  
+  .modal-content {
+    padding: 20px 16px;
+  }
+}
+
+/* Landscape orientation fix for phones */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+  }
+  
+  .photo-frame img {
+    width: 160px;
+  }
+  
+  .headline {
+    font-size: 22px !important;
+  }
+}
+
+/* Ensure images never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+.hero-inner,
+.section .inner,
+.contact-card,
+.blog-listing {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
 
 
