@@ -1454,7 +1454,189 @@ img {
   max-width: 100% !important;
   height: auto !important;
 }
+/* =============================================
+   MOBILE HERO FIXES FOR BETTER TEXT DISPLAY
+   ADD THIS AFTER YOUR EXISTING MOBILE CSS
+   ============================================= */
 
+/* ===== FIX FOR HOMEPAGE HERO (index.html) ===== */
+@media only screen and (max-width: 768px) {
+  
+  /* Force hero image structure to stack properly */
+  .hero-image {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 16px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Name BELOW photo on mobile */
+  .hero-brand {
+    order: 2 !important; /* Puts name after photo */
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+    margin-top: 8px !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  
+  /* Photo first */
+  .photo-frame {
+    order: 1 !important; /* Puts photo first */
+    margin: 0 auto !important;
+  }
+  
+  .photo-frame img {
+    width: 220px !important;
+    display: block !important;
+  }
+  
+  /* Fix headline text wrapping */
+  .hero-text {
+    width: 100% !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .headline {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+    margin: 0 auto 20px !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
+  }
+  
+  /* Better button spacing */
+  .hero-ctas {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    margin-top: 24px !important;
+  }
+  
+  .hero-ctas .btn {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+/* ===== FIX FOR BLOG HERO PAGES (blog.html, blog1.html) ===== */
+@media only screen and (max-width: 768px) {
+  
+  /* Blog hero container */
+  .hero-framed {
+    padding: 40px 16px !important;
+    min-height: 60vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Blog hero card - better text wrapping */
+  .hero-overlay-card {
+    width: 92% !important;
+    max-width: 92% !important;
+    padding: 32px 20px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Fix blog headline wrapping */
+  .hero-overlay-card .headline {
+    font-size: 26px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    margin-bottom: 16px !important;
+    padding: 0 8px !important;
+  }
+  
+  .hero-overlay-card .subline {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+    padding: 0 8px !important;
+  }
+  
+  /* Back buttons */
+  .hero-overlay-card .btn,
+  .blog-back-btn {
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    margin-top: 8px !important;
+  }
+}
+
+/* ===== SMALLER PHONES (480px) ===== */
+@media only screen and (max-width: 480px) {
+  
+  /* Homepage hero - even smaller */
+  .hero-brand {
+    font-size: 18px !important;
+  }
+  
+  .photo-frame img {
+    width: 200px !important;
+  }
+  
+  .headline {
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+    padding: 0 8px !important;
+  }
+  
+  .hero-ctas {
+    padding: 0 16px !important;
+  }
+  
+  /* Blog hero - even smaller */
+  .hero-overlay-card {
+    padding: 28px 16px !important;
+    width: 94% !important;
+  }
+  
+  .hero-overlay-card .headline {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+  }
+  
+  .hero-overlay-card .subline {
+    font-size: 14px !important;
+  }
+}
+
+/* ===== EXTRA SMALL PHONES (400px) ===== */
+@media only screen and (max-width: 400px) {
+  
+  .hero-brand {
+    font-size: 16px !important;
+  }
+  
+  .photo-frame img {
+    width: 180px !important;
+  }
+  
+  .headline {
+    font-size: 20px !important;
+    padding: 0 5px !important;
+  }
+  
+  .hero-overlay-card .headline {
+    font-size: 20px !important;
+  }
+}
 
 
 
