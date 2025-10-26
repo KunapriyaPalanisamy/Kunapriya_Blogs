@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Priya — Structured Thoughts, Purposeful Tech</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Subtle background animation (SVG) -->
+  <div class="bg-visual" aria-hidden="true">
+    <svg class="nodes" viewBox="0 0 1200 480" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0" stop-color="#eef2ff" stop-opacity="0.6"/>
+          <stop offset="1" stop-color="#fff8f2" stop-opacity="0.35"/>
+        </linearGradient>
+      </defs>
+      <g fill="none" stroke="url(#g1)" stroke-width="1.4" opacity="0.8">
+        <path class="line a" d="M10 220 C200 40, 420 420, 1190 200" />
+        <path class="line b" d="M0 160 C160 300, 560 20, 1200 170" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-image" aria-hidden="false">
+          <div class="hero-brand">KUNAPRIYA<br>PALANISAMY</div>
+          <div class="photo-frame">
+            <img src="assets/img/Profile.jpeg" alt="Priya — profile photo">
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <h1 class="headline">BUILDING CLARITY — IN CODE, IN CONTENT, IN CONVERSATION.</h1>
+
+          <div class="hero-ctas">
+            <a class="btn primary" role="button" href="#about">About Me</a>
+           <a class="btn" role="button" href="blog.html">Read My Thoughts</a>
+            <a class="btn" role="button" href="#services">Work With Me</a>
+            <a class="btn ghost" role="button" href="#contact">Let's Connect</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+  <section id="about" class="section">
+  <div class="inner">
+    <h2>About Me</h2>
+    <p class="tagline">Engineer by skill, enabler by purpose.</p>
+
+    <p class="intro">Hi, I’m <strong>Kunapriya Palanisamy</strong>.</p>
+
+    <p class="bio">
+      I design <strong>structured and scalable systems</strong> — from backend architectures in Java and Spring Boot to cross-functional solutions that connect people, data, and ideas. But beyond technology, what truly drives me is <em>clarity</em> — in how we build, communicate, and grow.
+    </p>
+
+    <p class="bio">
+      Over the years, I’ve realized that writing clean code and expressing clear thoughts share the same foundation: <strong>intentional structure</strong>. That connection shaped how I approach both my work and my writing. Whether I’m building <strong>robust APIs, integrating seamless UI flows</strong>, or mentoring students as a guest lecturer, I aim to make complex things understandable and purposeful.
+    </p>
+
+    <p class="bio">
+      This platform reflects that philosophy — a space where <strong>technology meets thought</strong>. Through my blogs, I explore lessons from real-world projects, communication, and career transitions, hoping to inspire clarity and confidence in others navigating similar paths.
+    </p>
+  </div>
+</section>
+
+
+
+    <!-- Blog / Thoughts -->
+    <section id="blog" class="section">
+      <div class="inner">
+        <h2>Blog</h2>
+        <p>Latest posts preview will go here.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="inner">
+        <h2>Work With Me</h2>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <figure>
+              <img src="assets/img/ResumeReview.jpeg" alt="Resume Review & Optimization">
+            </figure>
+            <h3>Resume Review & Optimization</h3>
+          </article>
+
+          <article class="service-card">
+            <figure>
+              <img src="assets/img/ContentStrategy.jpeg" alt="Content Strategy & Personal Branding">
+            </figure>
+            <h3>Content Strategy & Personal Branding</h3>
+          </article>
+
+          <article class="service-card">
+            <figure>
+              <img src="assets/img/PublicSpeaking.jpeg" alt="Public Speaking & Presentation Skills">
+            </figure>
+            <h3>Public Speaking & Presentation Skills</h3>
+          </article>
+
+          <article class="service-card">
+            <figure>
+              <img src="assets/img/CorporateCommunication.jpeg" alt="Corporate Communication & Soft Skills">
+            </figure>
+            <h3>Corporate Communication & Soft Skills</h3>
+          </article>
+
+          <article class="service-card">
+            <figure>
+              <img src="assets/img/Transition.jpeg" alt="Academia to Industry Transition Guidance">
+            </figure>
+            <h3>Academia to Industry Transition Guidance</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="inner">
+        <h2>Contact</h2>
+
+        <p>Email: <a href="mailto:kunapriyap2000@gmail.com">kunapriyap2000@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kunapriya-p2000/" target="_blank" rel="noopener">https://www.linkedin.com/in/kunapriya-p2000/</a></p>
+
+        <!-- Contact form (Formspree) -->
+        <form id="contact-form" action="https://formspree.io/f/xnngknpl" method="POST" novalidate>
+          <div class="contact-card">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="_replyto" type="email" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+            </div>
+
+            <input type="hidden" name="_subject" value="Portfolio message">
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Send Message</button>
+              <p id="contact-feedback" aria-live="polite" class="feedback"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- fancy divider between hero and about -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dividerGrad" x1="0" x2="1">
+            <stop offset="0" stop-color="#fff7f6"/>
+            <stop offset="1" stop-color="#f6fff9"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,0 C300,90 900,90 1200,0 L1200,120 L0,120 Z" fill="url(#dividerGrad)"/>
+      </svg>
+
+      <!-- optional centered card that overlaps the divider for a 'fancy block' -->
+      <div class="divider-card">Structured thoughts — purposeful tech</div>
+    </div>
+    <!-- Service Popup Modal -->
+<div id="serviceModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="serviceTitle">Service Title</h2>
+    <p id="serviceDescription">Service details will appear here based on what you click.</p>
+    <ul id="servicePoints">
+      <li>Example point 1</li>
+      <li>Example point 2</li>
+      <li>Example point 3</li>
+    </ul>
+  </div>
+</div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2025 Priya — Structured Thoughts, Purposeful Tech
+  </footer>
+
+  <script src="blogs.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

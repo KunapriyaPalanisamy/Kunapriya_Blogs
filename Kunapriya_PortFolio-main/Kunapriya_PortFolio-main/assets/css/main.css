@@ -1,0 +1,137 @@
+/* ===== Base Setup ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 8%;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 320px;
+  padding-right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #007bff;
+}
+
+/* ===== Hero Image ===== */
+.hero-image {
+  flex: 1;
+  min-width: 320px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 75%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text {
+    padding: 0;
+  }
+  .hero-image img {
+    width: 60%;
+  }
+}

@@ -1,0 +1,1180 @@
+/* ===== GLOBAL PAGE BACKGROUND ===== */
+body {
+  background: linear-gradient(180deg, #fff7f6 0%, #f6fff9 40%, #f8fbff 100%); /* Page-wide pastel background (keeps content readable) */
+  background-attachment: fixed;
+  color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* background SVG area — subtle pastel lines */
+.bg-visual {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 40vh;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: normal;
+}
+.bg-visual .nodes { width: 100%; height: 100%; }
+.bg-visual .line {
+  stroke: rgba(120, 100, 180, 0.12); /* soft lavender */
+  stroke-width: 1.6;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+/* ===== HERO SECTION ADJUSTMENTS ===== */
+.hero {
+  min-height: 66vh;                 /* reduce tall empty area */
+  padding: 18px 32px;               /* less top/bottom padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff7f5 0%, #f6fff9 100%); /* soft pastel gradient */
+  background-blend-mode: screen;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* inner container width and horizontal layout */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;                         /* slightly tighter gap */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform: translateY(-70px); /* move content up */
+  transition: transform 220ms ease;
+}
+
+/* left column: name + photo */
+.hero-image {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex: 0 0 auto;
+}
+
+/* visual name to the left of the photo */
+.hero-brand {
+  font-family: inherit; /* same as headline */
+  font-weight: 700;     /* match headline weight */
+  font-size: 24px;      /* keep your current name size */
+  color: #000;
+  line-height: 1.05;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 12px;
+  letter-spacing: 1px;  /* adds crisp clarity like headline */
+  text-transform: uppercase; /* match headline tone */
+}
+
+
+/* photo card */
+.photo-frame {
+  background: rgba(255,255,255,0.88);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 18px 36px rgba(20,20,20,0.05);
+  display: inline-block;
+}
+.photo-frame img {
+  width: 320px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* right column: headline + copy */
+.hero-text {
+  flex: 1 1 560px;
+}
+
+/* headline: uppercase and black, large like screenshot */
+.headline {
+  color: #000 !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 18px 0;
+  line-height: 1.02;
+  font-size: clamp(32px, 6.5vw, 64px);
+}
+
+/* first-person copy, black */
+.subline,
+.mission {
+  color: #000 !important;
+  margin: 8px 0;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* CTAs arranged similar to screenshot */
+.hero-ctas {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* small spacing tweak for buttons */
+.btn { padding: 12px 18px; }
+
+/* ===== ABOUT SECTION ===== */
+/* ===== ABOUT SECTION ===== */
+#about {
+  padding: 80px 20px; /* comfortable spacing around section */
+  background: #fdfdfd; /* subtle background for contrast */
+}
+
+#about .inner {
+  max-width: 750px; /* keeps content centered & readable */
+  margin: 0 auto;
+  line-height: 1.7;
+  text-align: center; /* modern centered look */
+}
+
+#about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+  color: #111;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#about .tagline {
+  font-style: italic;
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+#about .intro {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  color: #222;
+}
+
+#about .bio {
+  margin-bottom: 1.2em;
+  font-size: 1rem;
+  color: #333;
+}
+
+#about .bio strong {
+  color: #000; /* highlight skills and key phrases */
+}
+
+#about .bio em {
+  font-style: italic; /* emphasize passion points */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 1.8rem;
+  }
+  #about .intro {
+    font-size: 1rem;
+  }
+  #about .bio {
+    font-size: 0.95rem;
+  }
+  #about {
+    padding: 60px 15px;
+  }
+}
+
+/* ===== SECTION SPACING BELOW ABOUT ===== */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.section .inner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+/* 1) Make the entire page the same soft pastel (no dark areas) */
+body,
+main,
+.section,
+.site-footer,
+.bg-visual {
+  background: linear-gradient(180deg, #fff7f6 0%, #f6fff9 45%, #f8fbff 100%) !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+
+/* remove heavy dark blocks and shadows that look like "dark areas" */
+.site-footer,
+.section {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* make the SVG visual lines very subtle pastel (no dark stroke) */
+.bg-visual .line {
+  stroke: rgba(120,100,180,0.08); /* soft lavender */
+  mix-blend-mode: screen;
+}
+
+/* 2) Center the hero (name + photo + content) and avoid shrinking */
+.hero {
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* container that holds image+name and text side-by-side, centered on page */
+.hero-inner {
+  display: flex;
+  gap: 44px;
+  align-items: center;            /* vertical centering between image and text */
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  transform: translateY(-18px);   /* smaller lift so headline isn't hidden at top */
+}
+
+/* image + name column */
+.hero-image {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex: 0 0 auto;
+}
+
+/* name to the left of the photo */
+/* Force hero-brand to match headline style */
+.hero-brand {
+  font-family: 'Arial', sans-serif !important; /* same as headline */
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  color: #000 !important;
+  line-height: 1.05 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 12px;
+}
+
+
+/* photo styling — softer card so it blends with pastel */
+.photo-frame {
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 14px 36px rgba(10,10,10,0.04);
+  display: inline-block;
+}
+.photo-frame img {
+  width: 340px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* text column: give it room and prevent aggressive shrinking */
+.hero-text {
+  flex: 1 1 560px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        /* centers headline +/- copy vertically */
+  text-align: left;
+}
+
+/* headline: sizing tuned so it doesn't hide behind browser chrome */
+.headline {
+  font-size: clamp(28px, 5.2vw, 56px);
+  line-height: 1.02;
+  margin: 0 0 14px;
+  color: #000;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+/* CTAs: ensure close to headline and centered */
+.hero-text { display:flex; flex-direction:column; justify-content:center; }
+.hero-ctas { margin-top: 18px; display:flex; gap:14px; flex-wrap:wrap; }
+
+/* buttons styling (already present but enforced) */
+.btn { display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; }
+.btn.primary { background:#000; color:#fff; border: none; }
+.btn.ghost { background: transparent; color:#1b3b9b; border:1px solid rgba(27,59,155,0.12); }
+
+/* Fix: About section text was very faint because of color/stacking.
+   Force readable color and ensure it's above background */
+.section .inner {
+  color: #111 !important;          /* strong readable text */
+  opacity: 1 !important;
+  position: relative;
+  z-index: 3;
+  padding-top: 40px;              /* gives breathing room so content isn't under hero */
+}
+
+/* small spacing between contact and footer already set; ensure it's visible */
+.section.contact { padding-bottom: 80px; }
+
+/* responsive safety: keep headline from overlapping the viewport chrome */
+.headline { font-size: clamp(28px, 5.2vw, 56px); line-height:1.02; }
+
+/* responsive behavior */
+@media (max-width: 920px) {
+  .hero-inner { flex-direction: column; text-align: center; gap: 18px; transform: translateY(-12px); }
+  .hero-image { order: -1; align-items: center; }
+  .hero-brand { text-align: center; display:block; }
+  .photo-frame img { width: 260px; }
+  .hero-text { min-width: auto; width: 100%; justify-content: center; text-align: center; }
+  .headline { font-size: clamp(22px, 8vw, 36px); }
+}
+
+/* smaller upward/lift effect -> place hero a bit lower on the page */
+.hero {
+  padding-top: 22px;   /* small top spacing */
+  padding-bottom: 18px;
+}
+
+/* reduce negative translate so hero sits slightly lower (or remove lift) */
+.hero-inner {
+  transform: translateY(8px);  /* move hero content down slightly */
+  transition: transform 220ms ease;
+}
+
+/* responsive adjustments */
+@media (max-width: 920px) {
+  .hero-inner { transform: translateY(4px); }
+}
+
+/* small visual cleanups */
+a { text-decoration: underline; }
+
+/* Ensure about section is fully opaque and readable (override any blend/opacity) */
+#about .inner,
+#about .inner h2,
+#about .inner p,
+#about .inner * {
+  color: #111 !important;
+  opacity: 1 !important;
+  z-index: 5 !important;
+  mix-blend-mode: normal !important;
+  -webkit-text-fill-color: #111 !important; /* Safari */
+}
+
+/* make sure background SVG sits beneath content */
+.bg-visual {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 0 !important;
+  pointer-events: none;
+  mix-blend-mode: normal !important;
+}
+
+/* keep main/sections above the SVG */
+main, .hero, .section, .site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* increase space between contact section and the footer */
+#contact, .section.contact {
+  padding-bottom: 140px; /* increase to create more gap; tweak as needed */
+}
+
+/* right-align footer text and ensure it's visible on the pastel background */
+.site-footer {
+  position: relative;      /* default, part of document flow */
+  text-align: right;       /* keep it right-aligned */
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  color: #111;
+  background: transparent;
+  margin-top: auto;        /* pushes footer down if using flex layout */
+}
+
+/* Remove or undo any .section-divider styles added previously.
+   If you prefer to keep the CSS file as-is, add the override below instead. */
+
+/* If a divider block still exists in HTML, hide it */
+.section-divider { display: none !important; }
+.section-divider .divider-card { display: none !important; }
+
+/* Contact card / fancy box */
+.contact-card {
+  width: 100%;
+  max-width: 880px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,252,0.95));
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 18px 40px rgba(20,30,60,0.06);
+  border: 1px solid rgba(30,40,70,0.04);
+  box-sizing: border-box;
+}
+
+/* form grid rows */
+.contact-card .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+/* full-width field (textarea) */
+.contact-card .field.full { grid-column: 1 / -1; }
+
+/* field label + control */
+.contact-card label {
+  display: block;
+  font-size: 13px;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.contact-card input[type="text"],
+.contact-card input[type="email"],
+.contact-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(25,30,50,0.08);
+  background: rgba(255,255,255,0.98);
+  font-size: 15px;
+  color: #111;
+  box-sizing: border-box;
+  outline: none;
+  transition: box-shadow .12s ease, transform .08s ease, border-color .12s ease;
+}
+.contact-card input:focus,
+.contact-card textarea:focus {
+  box-shadow: 0 8px 24px rgba(27,59,155,0.06);
+  border-color: rgba(27,59,155,0.18);
+  transform: translateY(-2px);
+}
+
+/* form actions */
+.contact-card .form-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 6px;
+}
+.contact-card .feedback {
+  margin: 0;
+  color: #0a0a0a;
+  font-size: 14px;
+}
+
+/* button styling (already present but enforced for card) */
+.contact-card .btn.primary {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px rgba(10,20,40,0.06);
+  border: none;
+}
+/* make services a single horizontal row with small thumbnails and horizontal scroll */
+/* ===== Services Grid Compact ===== */
+.services-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;               /* tighter gap */
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-padding-left: 20px;
+  padding: 12px 16px 20px; /* smaller top/bottom padding */
+}
+
+/* each card smaller */
+.service-card {
+  flex: 0 0 160px;          /* fixed compact width */
+  height: 180px;            /* reduced height */
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card img {
+  width: 80px;              /* smaller thumbnail */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.service-card h3 {
+  font-size: 0.9rem;        /* compact title */
+  text-align: center;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border: 2px solid rgba(108, 92, 231, 0.25);
+}
+
+.service-card::after {
+  font-size: 11px;
+  bottom: 8px;
+  padding: 3px 6px;
+}
+/* ===== Service Popup Styles ===== */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px 40px;
+  width: 420px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+  color: #555;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* ===== BLOG GRID & CARDS ===== */
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Each blog card styling */
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.blog-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 14px 16px 8px;
+  color: #111;
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 16px 12px;
+  line-height: 1.4;
+}
+
+.blog-card button.read-more {
+  margin: 0 16px 16px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.blog-card button.read-more:hover {
+  background: #5a4bd6;
+  transform: translateY(-1px);
+}
+
+.blog-card:hover {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .blog-grid {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .blog-card {
+    width: 90%;
+  }
+}
+/* ===== BLOG PAGE — FRAMED LANDSCAPE HERO ===== */
+.hero-framed {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: none;
+  min-height: 70vh;
+}
+
+.hero-frame {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.hero-overlay-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 40px 50px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.hero-overlay-card .headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 12px;
+}
+
+.hero-overlay-card .subline {
+  font-size: 1.05rem;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.hero-overlay-card .btn.primary {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .hero-frame {
+    width: 94%;
+    aspect-ratio: 3 / 2;
+  }
+
+  .hero-overlay-card {
+    padding: 24px 28px;
+  }
+
+  .hero-overlay-card .headline {
+    font-size: clamp(22px, 7vw, 36px);
+  }
+}
+/* ===== BLOG HERO FRAMED STYLE (Refined) ===== */
+/* ===== Framed Landscape Hero (Desk Image + Overlay Card) ===== */
+/* ===== BLOG GRID & CARDS ===== */
+.blog-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 16px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.blog-card-content h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.blog-card-content p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.blog-card-content .btn {
+  display: inline-block;
+  background: #6c5ce7;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.blog-card-content .btn:hover {
+  background: #5a4bd6;
+  transform: translateY(-1px);
+}
+
+/* ===== HERO FRAMED SECTION ===== */
+.hero-framed {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background: url("assets/img/desk_temp.jpg") center/cover no-repeat;
+  background-size: cover;
+  min-height: 70vh;
+  box-sizing: border-box;
+}
+
+.hero-overlay-card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-overlay-card .headline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  font-size: clamp(28px, 4.5vw, 48px);
+  margin-bottom: 12px;
+}
+
+.hero-overlay-card .subline {
+  color: #333;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.hero-overlay-card .btn.primary {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.hero-overlay-card .btn.primary:hover {
+  background: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .blog-listing {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 12px;
+  }
+
+  .blog-card img {
+    height: 160px;
+  }
+
+  .hero-overlay-card {
+    padding: 24px 28px;
+  }
+
+  .hero-overlay-card .headline {
+    font-size: clamp(22px, 7vw, 36px);
+  }
+}
+/* ===== KEEP FOOTER AT THE BOTTOM ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.blog-listing {
+  flex: 1; /* take available space so footer pushes down */
+}
+
+/* ===== FIX FOOTER TO TRUE BOTTOM-RIGHT ===== */
+.site-footer {
+  position: relative;      /* default, part of document flow */
+  text-align: right;       /* keep it right-aligned */
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  color: #111;
+  background: transparent;
+  margin-top: auto;        /* pushes footer down if using flex layout */
+}
+
+/* optional hover effect if you want it subtle */
+html, body {
+  height: 100%;
+  position: relative;
+}
+/* ===== Gradient Style for "Read More" Buttons Only ===== */
+.btn.read-more {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn.read-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+.blog-post {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.75;
+  font-size: 1rem; /* slightly smaller but readable */
+  color: #111;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.blog-post h2 {
+  font-size: 1.6rem; /* was 1.8rem */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111;
+  border-left: 4px solid #6c5ce7;
+  padding-left: 10px;
+}
+.blog-post ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.blog-post p {
+  margin-bottom: 1.5rem;
+}
+/* pull quotes / highlight boxes */
+.pull-quote {
+  border-left: 4px solid #6c5ce7;
+  padding-left: 12px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #444;
+  font-size: 0.95rem; /* slightly smaller */
+}
+
+
+/* responsive typography */
+@media (max-width: 768px) {
+  .blog-post {
+    padding: 24px 16px;
+    font-size: 0.95rem; /* smaller for mobile */
+  }
+
+  .blog-post h2 {
+    font-size: 1.4rem;
+  }
+
+  .pull-quote {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== BACK TO BLOG BUTTON ===== */
+.blog-back-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.blog-back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+/* ===== HERO OVERRIDE FOR BLOG1 ===== */
+.hero-framed {
+  background: url("assets/img/Blog1_img/CoverPage.jpg") center/cover no-repeat;
+  background-size: cover;
+}
+
+.hero-overlay-card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 36px 48px;
+  border-radius: 16px;
+  max-width: 650px;
+  text-align: center;
+}
+
+.hero-overlay-card .headline {
+  font-size: clamp(28px, 5vw, 46px);
+}
+
+.hero-overlay-card .subline {
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
+   
+/* General breakpoints */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text .headline {
+    font-size: 2rem;
+  }
+
+  .hero-text .subline {
+    font-size: 1rem;
+  }
+
+  .hero-ctas a.btn {
+    display: block;
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+
+  /* Blog Cards */
+  .blog-listing,
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .blog-card,
+  .service-card {
+    width: 100%;
+  }
+
+  .blog-card img,
+  .service-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Forms */
+  form .field input,
+  form .field textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Footer spacing */
+  .site-footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero-text .headline {
+    font-size: 1.5rem;
+  }
+
+  .hero-text .subline {
+    font-size: 0.9rem;
+  }
+
+  .hero-ctas a.btn {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .pull-quote {
+    font-size: 0.95rem;
+    margin: 1rem 0;
+  }
+
+  .blog-post p,
+  .blog-post li {
+    font-size: 0.95rem;
+  }
+  
+  .divider-card {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .modal-content {
+    max-width: 95%;
+    padding: 1rem;
+  }
+}
+
+/* Ensure images in blog posts scale properly */
+.blog-post img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: stack hero brand / photo on very narrow screens */
+@media (max-width: 360px) {
+  .hero-brand {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+  
+  .photo-frame img {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
