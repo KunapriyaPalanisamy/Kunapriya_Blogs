@@ -1172,377 +1172,287 @@ html, body {
   }
 }
 /* =============================================
-   MOBILE RESPONSIVE IMPROVEMENTS
-   Add these rules to the END of your style.css
+   MOBILE RESPONSIVE IMPROVEMENTS (STRONG OVERRIDES)
+   Replace your existing mobile CSS with this version
    ============================================= */
 
-/* Tablet and below (1024px) */
-@media (max-width: 1024px) {
+/* Force mobile layout for tablets and phones */
+@media only screen and (max-width: 1024px) {
   
-  /* HERO SECTION - Stack everything vertically */
+  /* Remove transforms that interfere */
+  .hero-inner {
+    transform: none !important;
+  }
+  
+  /* HERO SECTION - Force vertical stack */
   .hero {
-    min-height: auto;
-    padding: 30px 20px;
+    min-height: auto !important;
+    padding: 30px 20px !important;
   }
   
   .hero-inner {
-    flex-direction: column;
-    gap: 24px;
-    transform: translateY(0); /* Remove upward shift */
-    text-align: center;
+    flex-direction: column !important;
+    gap: 24px !important;
+    text-align: center !important;
+    max-width: 100% !important;
   }
   
-  /* Stack name and photo vertically */
+  /* Stack name and photo */
   .hero-image {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+    width: 100% !important;
   }
   
   .hero-brand {
-    text-align: center;
-    padding-right: 0;
-    font-size: 20px;
+    text-align: center !important;
+    padding-right: 0 !important;
+    font-size: 20px !important;
+    display: block !important;
+  }
+  
+  .photo-frame {
+    display: block !important;
+    margin: 0 auto !important;
   }
   
   .photo-frame img {
-    width: 250px;
+    width: 250px !important;
   }
   
-  /* Text section centered */
+  /* Text section */
   .hero-text {
-    min-width: auto;
-    width: 100%;
-    text-align: center;
+    min-width: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    flex: none !important;
   }
   
   .headline {
-    font-size: clamp(24px, 6vw, 40px) !important;
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-  
-  /* Buttons full-width and stacked */
-  .hero-ctas {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto 0;
-  }
-  
-  .hero-ctas .btn {
-    width: 100%;
-    padding: 14px 20px;
-    font-size: 15px;
-    text-align: center;
-  }
-  
-  /* ABOUT SECTION */
-  #about {
-    padding: 50px 20px;
-  }
-  
-  #about h2 {
-    font-size: 1.8rem;
-  }
-  
-  #about .bio {
-    font-size: 0.95rem;
-  }
-  
-  /* SERVICES - Stack cards vertically */
-  .services-grid {
-    flex-direction: column;
-    overflow-x: visible;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .service-card {
-    flex: 1 1 auto;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    height: auto;
-    min-height: 200px;
-  }
-  
-  .service-card img {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .service-card h3 {
-    font-size: 1rem;
-  }
-  
-  /* BLOG LISTING */
-  .blog-listing {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .blog-card {
-    width: 100%;
-  }
-  
-  /* CONTACT FORM */
-  .contact-card .form-row {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  
-  .contact-card {
-    padding: 20px 16px;
-  }
-  
-  /* HERO FRAMED (Blog pages) */
-  .hero-framed {
-    min-height: 50vh;
-    padding: 30px 20px;
-  }
-  
-  .hero-overlay-card {
-    padding: 30px 24px;
-    max-width: 90%;
-  }
-  
-  .hero-overlay-card .headline {
-    font-size: clamp(24px, 6vw, 36px) !important;
-  }
-  
-  /* BLOG POST */
-  .blog-post {
-    padding: 30px 20px;
-    font-size: 0.95rem;
-  }
-  
-  .blog-post h2 {
-    font-size: 1.4rem;
-  }
-}
-
-/* Mobile phones (768px and below) */
-@media (max-width: 768px) {
-  
-  body {
-    font-size: 15px;
-  }
-  
-  /* HERO - Further optimize for phones */
-  .hero {
-    padding: 20px 16px;
-  }
-  
-  .hero-brand {
-    font-size: 18px;
-    line-height: 1.2;
-  }
-  
-  .photo-frame img {
-    width: 200px;
-  }
-  
-  .headline {
-    font-size: clamp(20px, 7vw, 32px) !important;
-    margin-bottom: 12px;
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 16px !important;
+    word-break: break-word !important;
   }
   
   .subline,
   .mission {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   
+  /* Buttons - full width stack */
   .hero-ctas {
-    max-width: 100%;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 20px auto 0 !important;
   }
   
   .hero-ctas .btn {
-    padding: 12px 18px;
-    font-size: 14px;
+    width: 100% !important;
+    display: block !important;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    text-align: center !important;
   }
   
-  /* ABOUT */
+  /* ABOUT SECTION */
   #about {
-    padding: 40px 16px;
+    padding: 50px 20px !important;
   }
   
   #about h2 {
-    font-size: 1.6rem;
-  }
-  
-  #about .intro {
-    font-size: 1rem;
+    font-size: 1.8rem !important;
   }
   
   #about .bio {
-    font-size: 0.9rem;
+    font-size: 0.95rem !important;
   }
   
-  /* SERVICES */
+  /* SERVICES - Stack vertically */
+  .services-grid {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+  
   .service-card {
-    padding: 16px;
-    min-height: 180px;
+    flex: none !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    min-height: 200px !important;
   }
   
   .service-card img {
-    width: 90px;
-    height: 90px;
-  }
-  
-  .service-card h3 {
-    font-size: 0.95rem;
+    width: 100px !important;
+    height: 100px !important;
   }
   
   /* BLOG LISTING */
   .blog-listing {
-    padding: 16px;
-    margin: 40px auto;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
   }
   
-  .blog-card img {
-    height: 160px;
+  /* CONTACT FORM */
+  .contact-card .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
   
-  .blog-card-content h2 {
-    font-size: 1.1rem;
-  }
-  
-  .blog-card-content p {
-    font-size: 0.9rem;
-  }
-  
-  /* CONTACT */
   .contact-card {
-    padding: 18px 14px;
+    padding: 20px 16px !important;
   }
   
-  .contact-card label {
-    font-size: 12px;
+  /* BLOG HERO */
+  .hero-framed {
+    min-height: 50vh !important;
+    padding: 30px 20px !important;
   }
   
-  .contact-card input,
-  .contact-card textarea {
-    font-size: 14px;
-    padding: 10px 12px;
+  .hero-overlay-card {
+    padding: 30px 24px !important;
+    max-width: 90% !important;
   }
   
-  /* MODAL */
-  .modal-content {
-    width: 90%;
-    padding: 24px 20px;
-  }
-  
-  .modal-content h2 {
-    font-size: 1.3rem;
-  }
-  
-  .modal-content p {
-    font-size: 0.9rem;
+  .hero-overlay-card .headline {
+    font-size: 28px !important;
   }
   
   /* BLOG POST */
   .blog-post {
-    padding: 24px 16px;
-    font-size: 0.9rem;
+    padding: 30px 20px !important;
+    font-size: 0.95rem !important;
   }
   
   .blog-post h2 {
-    font-size: 1.3rem;
-  }
-  
-  .pull-quote {
-    font-size: 0.85rem;
-  }
-  
-  /* FOOTER */
-  .site-footer {
-    text-align: center;
-    padding: 16px 20px;
-    font-size: 0.85rem;
+    font-size: 1.4rem !important;
   }
 }
 
-/* Extra small phones (480px and below) */
-@media (max-width: 480px) {
+/* PHONE SCREENS */
+@media only screen and (max-width: 768px) {
+  
+  body {
+    font-size: 15px !important;
+  }
+  
+  .hero {
+    padding: 20px 16px !important;
+  }
   
   .hero-brand {
-    font-size: 16px;
+    font-size: 18px !important;
   }
   
   .photo-frame img {
-    width: 180px;
+    width: 200px !important;
   }
   
   .headline {
-    font-size: clamp(18px, 8vw, 28px) !important;
-    word-break: break-word;
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero-ctas {
+    max-width: 100% !important;
   }
   
   .hero-ctas .btn {
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: 12px 18px !important;
+    font-size: 14px !important;
+  }
+  
+  #about {
+    padding: 40px 16px !important;
   }
   
   #about h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem !important;
   }
   
   #about .bio {
-    font-size: 0.85rem;
+    font-size: 0.9rem !important;
   }
   
   .service-card {
-    min-height: 160px;
+    padding: 16px !important;
+    min-height: 180px !important;
+  }
+  
+  .blog-listing {
+    padding: 16px !important;
+    margin: 40px auto !important;
   }
   
   .blog-card img {
-    height: 140px;
+    height: 160px !important;
   }
   
-  .blog-post {
-    padding: 20px 12px;
+  .contact-card {
+    padding: 18px 14px !important;
   }
   
   .modal-content {
-    padding: 20px 16px;
+    width: 90% !important;
+    padding: 24px 20px !important;
+  }
+  
+  .site-footer {
+    text-align: center !important;
+    padding: 16px 20px !important;
+    font-size: 0.85rem !important;
   }
 }
 
-/* Landscape orientation fix for phones */
-@media (max-height: 600px) and (orientation: landscape) {
-  .hero {
-    min-height: auto;
+/* SMALL PHONES */
+@media only screen and (max-width: 480px) {
+  
+  .hero-brand {
+    font-size: 16px !important;
   }
   
   .photo-frame img {
-    width: 160px;
+    width: 180px !important;
   }
   
   .headline {
-    font-size: 22px !important;
+    font-size: 20px !important;
+  }
+  
+  .hero-ctas .btn {
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+  }
+  
+  #about h2 {
+    font-size: 1.4rem !important;
+  }
+  
+  #about .bio {
+    font-size: 0.85rem !important;
   }
 }
 
-/* Ensure images never overflow */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Prevent horizontal scroll */
-body {
-  overflow-x: hidden;
+* {
+  box-sizing: border-box !important;
 }
 
-.hero-inner,
-.section .inner,
-.contact-card,
-.blog-listing {
-  overflow-x: hidden;
-  box-sizing: border-box;
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 
