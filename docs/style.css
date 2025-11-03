@@ -1,6 +1,6 @@
 /* ===== GLOBAL PAGE BACKGROUND ===== */
 body {
-  background: linear-gradient(180deg, #fff7f6 0%, #f6fff9 40%, #f8fbff 100%); /* Page-wide pastel background (keeps content readable) */
+  background: linear-gradient(180deg, #fff7f6 0%, #f6fff9 40%, #f8fbff 100%);
   background-attachment: fixed;
   color: #0a0a0a;
   margin: 0;
@@ -19,7 +19,7 @@ body {
 }
 .bg-visual .nodes { width: 100%; height: 100%; }
 .bg-visual .line {
-  stroke: rgba(120, 100, 180, 0.12); /* soft lavender */
+  stroke: rgba(120, 100, 180, 0.12);
   stroke-width: 1.6;
   opacity: 0.9;
   mix-blend-mode: screen;
@@ -27,32 +27,30 @@ body {
 
 /* ===== HERO SECTION ADJUSTMENTS ===== */
 .hero {
-  min-height: 66vh;                 /* reduce tall empty area */
-  padding: 18px 32px;               /* less top/bottom padding */
+  min-height: 66vh;
+  padding: 18px 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #fff7f5 0%, #f6fff9 100%); /* soft pastel gradient */
+  background: linear-gradient(135deg, #fff7f5 0%, #f6fff9 100%);
   background-blend-mode: screen;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
 }
 
-/* inner container width and horizontal layout */
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 40px;                         /* slightly tighter gap */
+  gap: 40px;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  transform: translateY(-70px); /* move content up */
+  transform: translateY(-70px);
   transition: transform 220ms ease;
 }
 
-/* left column: name + photo */
 .hero-image {
   display: flex;
   align-items: center;
@@ -60,22 +58,19 @@ body {
   flex: 0 0 auto;
 }
 
-/* visual name to the left of the photo */
 .hero-brand {
-  font-family: inherit; /* same as headline */
-  font-weight: 700;     /* match headline weight */
-  font-size: 24px;      /* keep your current name size */
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 24px;
   color: #000;
   line-height: 1.05;
   text-align: right;
   white-space: nowrap;
   padding-right: 12px;
-  letter-spacing: 1px;  /* adds crisp clarity like headline */
-  text-transform: uppercase; /* match headline tone */
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-
-/* photo card */
 .photo-frame {
   background: rgba(255,255,255,0.88);
   border-radius: 12px;
@@ -90,12 +85,10 @@ body {
   border-radius: 8px;
 }
 
-/* right column: headline + copy */
 .hero-text {
   flex: 1 1 560px;
 }
 
-/* headline: uppercase and black, large like screenshot */
 .headline {
   color: #000 !important;
   text-transform: uppercase;
@@ -105,7 +98,6 @@ body {
   font-size: clamp(32px, 6.5vw, 64px);
 }
 
-/* first-person copy, black */
 .subline,
 .mission {
   color: #000 !important;
@@ -114,7 +106,6 @@ body {
   font-size: 16px;
 }
 
-/* CTAs arranged similar to screenshot */
 .hero-ctas {
   margin-top: 18px;
   display: flex;
@@ -122,21 +113,19 @@ body {
   flex-wrap: wrap;
 }
 
-/* small spacing tweak for buttons */
 .btn { padding: 12px 18px; }
 
 /* ===== ABOUT SECTION ===== */
-/* ===== ABOUT SECTION ===== */
 #about {
-  padding: 80px 20px; /* comfortable spacing around section */
-  background: #fdfdfd; /* subtle background for contrast */
+  padding: 80px 20px;
+  background: #fdfdfd;
 }
 
 #about .inner {
-  max-width: 750px; /* keeps content centered & readable */
+  max-width: 750px;
   margin: 0 auto;
   line-height: 1.7;
-  text-align: center; /* modern centered look */
+  text-align: center;
 }
 
 #about h2 {
@@ -168,30 +157,13 @@ body {
 }
 
 #about .bio strong {
-  color: #000; /* highlight skills and key phrases */
+  color: #000;
 }
 
 #about .bio em {
-  font-style: italic; /* emphasize passion points */
+  font-style: italic;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  #about h2 {
-    font-size: 1.8rem;
-  }
-  #about .intro {
-    font-size: 1rem;
-  }
-  #about .bio {
-    font-size: 0.95rem;
-  }
-  #about {
-    padding: 60px 15px;
-  }
-}
-
-/* ===== SECTION SPACING BELOW ABOUT ===== */
 .section {
   padding: 3rem 1.5rem;
 }
@@ -201,8 +173,6 @@ body {
   margin: 0 auto;
 }
 
-
-/* 1) Make the entire page the same soft pastel (no dark areas) */
 body,
 main,
 .section,
@@ -213,20 +183,17 @@ main,
   box-shadow: none !important;
 }
 
-/* remove heavy dark blocks and shadows that look like "dark areas" */
 .site-footer,
 .section {
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* make the SVG visual lines very subtle pastel (no dark stroke) */
 .bg-visual .line {
-  stroke: rgba(120,100,180,0.08); /* soft lavender */
+  stroke: rgba(120,100,180,0.08);
   mix-blend-mode: screen;
 }
 
-/* 2) Center the hero (name + photo + content) and avoid shrinking */
 .hero {
   min-height: 62vh;
   display: flex;
@@ -237,19 +204,17 @@ main,
   z-index: 2;
 }
 
-/* container that holds image+name and text side-by-side, centered on page */
 .hero-inner {
   display: flex;
   gap: 44px;
-  align-items: center;            /* vertical centering between image and text */
+  align-items: center;
   justify-content: center;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  transform: translateY(-18px);   /* smaller lift so headline isn't hidden at top */
+  transform: translateY(-18px);
 }
 
-/* image + name column */
 .hero-image {
   display: flex;
   align-items: center;
@@ -257,10 +222,8 @@ main,
   flex: 0 0 auto;
 }
 
-/* name to the left of the photo */
-/* Force hero-brand to match headline style */
 .hero-brand {
-  font-family: 'Arial', sans-serif !important; /* same as headline */
+  font-family: 'Arial', sans-serif !important;
   font-weight: 700 !important;
   font-size: 24px !important;
   color: #000 !important;
@@ -272,8 +235,6 @@ main,
   padding-right: 12px;
 }
 
-
-/* photo styling — softer card so it blends with pastel */
 .photo-frame {
   background: rgba(255,255,255,0.95);
   border-radius: 12px;
@@ -288,17 +249,15 @@ main,
   border-radius: 8px;
 }
 
-/* text column: give it room and prevent aggressive shrinking */
 .hero-text {
   flex: 1 1 560px;
   min-width: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: center;        /* centers headline +/- copy vertically */
+  justify-content: center;
   text-align: left;
 }
 
-/* headline: sizing tuned so it doesn't hide behind browser chrome */
 .headline {
   font-size: clamp(28px, 5.2vw, 56px);
   line-height: 1.02;
@@ -308,62 +267,35 @@ main,
   word-break: break-word;
 }
 
-/* CTAs: ensure close to headline and centered */
 .hero-text { display:flex; flex-direction:column; justify-content:center; }
 .hero-ctas { margin-top: 18px; display:flex; gap:14px; flex-wrap:wrap; }
 
-/* buttons styling (already present but enforced) */
 .btn { display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none; }
 .btn.primary { background:#000; color:#fff; border: none; }
 .btn.ghost { background: transparent; color:#1b3b9b; border:1px solid rgba(27,59,155,0.12); }
 
-/* Fix: About section text was very faint because of color/stacking.
-   Force readable color and ensure it's above background */
 .section .inner {
-  color: #111 !important;          /* strong readable text */
+  color: #111 !important;
   opacity: 1 !important;
   position: relative;
   z-index: 3;
-  padding-top: 40px;              /* gives breathing room so content isn't under hero */
+  padding-top: 40px;
 }
 
-/* small spacing between contact and footer already set; ensure it's visible */
 .section.contact { padding-bottom: 80px; }
 
-/* responsive safety: keep headline from overlapping the viewport chrome */
-.headline { font-size: clamp(28px, 5.2vw, 56px); line-height:1.02; }
-
-/* responsive behavior */
-@media (max-width: 920px) {
-  .hero-inner { flex-direction: column; text-align: center; gap: 18px; transform: translateY(-12px); }
-  .hero-image { order: -1; align-items: center; }
-  .hero-brand { text-align: center; display:block; }
-  .photo-frame img { width: 260px; }
-  .hero-text { min-width: auto; width: 100%; justify-content: center; text-align: center; }
-  .headline { font-size: clamp(22px, 8vw, 36px); }
-}
-
-/* smaller upward/lift effect -> place hero a bit lower on the page */
 .hero {
-  padding-top: 22px;   /* small top spacing */
+  padding-top: 22px;
   padding-bottom: 18px;
 }
 
-/* reduce negative translate so hero sits slightly lower (or remove lift) */
 .hero-inner {
-  transform: translateY(8px);  /* move hero content down slightly */
+  transform: translateY(8px);
   transition: transform 220ms ease;
 }
 
-/* responsive adjustments */
-@media (max-width: 920px) {
-  .hero-inner { transform: translateY(4px); }
-}
-
-/* small visual cleanups */
 a { text-decoration: underline; }
 
-/* Ensure about section is fully opaque and readable (override any blend/opacity) */
 #about .inner,
 #about .inner h2,
 #about .inner p,
@@ -372,10 +304,9 @@ a { text-decoration: underline; }
   opacity: 1 !important;
   z-index: 5 !important;
   mix-blend-mode: normal !important;
-  -webkit-text-fill-color: #111 !important; /* Safari */
+  -webkit-text-fill-color: #111 !important;
 }
 
-/* make sure background SVG sits beneath content */
 .bg-visual {
   position: absolute;
   inset: 0 0 auto 0;
@@ -384,36 +315,28 @@ a { text-decoration: underline; }
   mix-blend-mode: normal !important;
 }
 
-/* keep main/sections above the SVG */
 main, .hero, .section, .site-footer {
   position: relative;
   z-index: 2;
 }
 
-/* increase space between contact section and the footer */
 #contact, .section.contact {
-  padding-bottom: 140px; /* increase to create more gap; tweak as needed */
+  padding-bottom: 140px;
 }
 
-/* right-align footer text and ensure it's visible on the pastel background */
 .site-footer {
-  position: relative;      /* default, part of document flow */
-  text-align: right;       /* keep it right-aligned */
+  position: relative;
+  text-align: right;
   padding: 10px 30px;
   font-size: 0.9rem;
   color: #111;
   background: transparent;
-  margin-top: auto;        /* pushes footer down if using flex layout */
+  margin-top: auto;
 }
 
-/* Remove or undo any .section-divider styles added previously.
-   If you prefer to keep the CSS file as-is, add the override below instead. */
-
-/* If a divider block still exists in HTML, hide it */
 .section-divider { display: none !important; }
 .section-divider .divider-card { display: none !important; }
 
-/* Contact card / fancy box */
 .contact-card {
   width: 100%;
   max-width: 880px;
@@ -425,7 +348,6 @@ main, .hero, .section, .site-footer {
   box-sizing: border-box;
 }
 
-/* form grid rows */
 .contact-card .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -433,10 +355,8 @@ main, .hero, .section, .site-footer {
   margin-bottom: 12px;
 }
 
-/* full-width field (textarea) */
 .contact-card .field.full { grid-column: 1 / -1; }
 
-/* field label + control */
 .contact-card label {
   display: block;
   font-size: 13px;
@@ -466,7 +386,6 @@ main, .hero, .section, .site-footer {
   transform: translateY(-2px);
 }
 
-/* form actions */
 .contact-card .form-actions {
   display: flex;
   align-items: center;
@@ -479,7 +398,6 @@ main, .hero, .section, .site-footer {
   font-size: 14px;
 }
 
-/* button styling (already present but enforced for card) */
 .contact-card .btn.primary {
   background: #0b0b0b;
   color: #fff;
@@ -488,22 +406,20 @@ main, .hero, .section, .site-footer {
   box-shadow: 0 10px 22px rgba(10,20,40,0.06);
   border: none;
 }
-/* make services a single horizontal row with small thumbnails and horizontal scroll */
-/* ===== Services Grid Compact ===== */
+
 .services-grid {
   display: flex;
   flex-wrap: nowrap;
-  gap: 16px;               /* tighter gap */
+  gap: 16px;
   justify-content: flex-start;
   overflow-x: auto;
   scroll-padding-left: 20px;
-  padding: 12px 16px 20px; /* smaller top/bottom padding */
+  padding: 12px 16px 20px;
 }
 
-/* each card smaller */
 .service-card {
-  flex: 0 0 160px;          /* fixed compact width */
-  height: 180px;            /* reduced height */
+  flex: 0 0 160px;
+  height: 180px;
   background: #fff;
   border-radius: 10px;
   padding: 10px;
@@ -518,7 +434,7 @@ main, .hero, .section, .site-footer {
 }
 
 .service-card img {
-  width: 80px;              /* smaller thumbnail */
+  width: 80px;
   height: 80px;
   object-fit: cover;
   border-radius: 6px;
@@ -526,7 +442,7 @@ main, .hero, .section, .site-footer {
 }
 
 .service-card h3 {
-  font-size: 0.9rem;        /* compact title */
+  font-size: 0.9rem;
   text-align: center;
   margin: 0;
   transition: color 0.2s ease;
@@ -542,9 +458,9 @@ main, .hero, .section, .site-footer {
   bottom: 8px;
   padding: 3px 6px;
 }
-/* ===== Service Popup Styles ===== */
+
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   z-index: 999;
   top: 0;
@@ -602,7 +518,7 @@ main, .hero, .section, .site-footer {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
-/* ===== BLOG GRID & CARDS ===== */
+
 .blog-grid {
   display: flex;
   flex-wrap: wrap;
@@ -611,7 +527,6 @@ main, .hero, .section, .site-footer {
   margin-top: 24px;
 }
 
-/* Each blog card styling */
 .blog-card {
   background: #fff;
   border-radius: 12px;
@@ -665,26 +580,16 @@ main, .hero, .section, .site-footer {
   transform: translateY(-2px);
 }
 
-/* Responsive: stack cards on small screens */
-@media (max-width: 768px) {
-  .blog-grid {
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-  }
-  .blog-card {
-    width: 90%;
-  }
-}
-/* ===== BLOG PAGE — FRAMED LANDSCAPE HERO ===== */
 .hero-framed {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
-  background: none;
+  background: url("assets/img/desk_temp.jpg") center/cover no-repeat;
+  background-size: cover;
   min-height: 70vh;
+  box-sizing: border-box;
 }
 
 .hero-frame {
@@ -708,17 +613,12 @@ main, .hero, .section, .site-footer {
 }
 
 .hero-overlay-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.86);
-  backdrop-filter: blur(6px);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
   padding: 40px 50px;
-  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
   max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  text-align: center;
 }
 
 .hero-overlay-card .headline {
@@ -726,13 +626,13 @@ main, .hero, .section, .site-footer {
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
-  font-size: clamp(28px, 5vw, 48px);
+  font-size: clamp(28px, 4.5vw, 48px);
   margin-bottom: 12px;
 }
 
 .hero-overlay-card .subline {
+  color: #333;
   font-size: 1.05rem;
-  color: #111;
   margin-bottom: 24px;
 }
 
@@ -741,25 +641,14 @@ main, .hero, .section, .site-footer {
   color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
 }
 
-@media (max-width: 768px) {
-  .hero-frame {
-    width: 94%;
-    aspect-ratio: 3 / 2;
-  }
-
-  .hero-overlay-card {
-    padding: 24px 28px;
-  }
-
-  .hero-overlay-card .headline {
-    font-size: clamp(22px, 7vw, 36px);
-  }
+.hero-overlay-card .btn.primary:hover {
+  background: #333;
 }
-/* ===== BLOG HERO FRAMED STYLE (Refined) ===== */
-/* ===== Framed Landscape Hero (Desk Image + Overlay Card) ===== */
-/* ===== BLOG GRID & CARDS ===== */
+
 .blog-listing {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
@@ -767,6 +656,7 @@ main, .hero, .section, .site-footer {
   max-width: 1100px;
   margin: 60px auto;
   padding: 0 16px;
+  flex: 1;
 }
 
 .blog-card {
@@ -829,77 +719,6 @@ main, .hero, .section, .site-footer {
   transform: translateY(-1px);
 }
 
-/* ===== HERO FRAMED SECTION ===== */
-.hero-framed {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
-  background: url("assets/img/desk_temp.jpg") center/cover no-repeat;
-  background-size: cover;
-  min-height: 70vh;
-  box-sizing: border-box;
-}
-
-.hero-overlay-card {
-  background: rgba(255, 255, 255, 0.92);
-  padding: 40px 50px;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-  max-width: 600px;
-  text-align: center;
-}
-
-.hero-overlay-card .headline {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000;
-  font-size: clamp(28px, 4.5vw, 48px);
-  margin-bottom: 12px;
-}
-
-.hero-overlay-card .subline {
-  color: #333;
-  font-size: 1.05rem;
-  margin-bottom: 24px;
-}
-
-.hero-overlay-card .btn.primary {
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.2s ease;
-}
-
-.hero-overlay-card .btn.primary:hover {
-  background: #333;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .blog-listing {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 0 12px;
-  }
-
-  .blog-card img {
-    height: 160px;
-  }
-
-  .hero-overlay-card {
-    padding: 24px 28px;
-  }
-
-  .hero-overlay-card .headline {
-    font-size: clamp(22px, 7vw, 36px);
-  }
-}
-/* ===== KEEP FOOTER AT THE BOTTOM ===== */
 html, body {
   height: 100%;
   margin: 0;
@@ -911,27 +730,11 @@ body {
   min-height: 100vh;
 }
 
-.blog-listing {
-  flex: 1; /* take available space so footer pushes down */
-}
-
-/* ===== FIX FOOTER TO TRUE BOTTOM-RIGHT ===== */
-.site-footer {
-  position: relative;      /* default, part of document flow */
-  text-align: right;       /* keep it right-aligned */
-  padding: 10px 30px;
-  font-size: 0.9rem;
-  color: #111;
-  background: transparent;
-  margin-top: auto;        /* pushes footer down if using flex layout */
-}
-
-/* optional hover effect if you want it subtle */
 html, body {
   height: 100%;
   position: relative;
 }
-/* ===== Gradient Style for "Read More" Buttons Only ===== */
+
 .btn.read-more {
   display: inline-block;
   padding: 10px 24px;
@@ -951,27 +754,43 @@ html, body {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
   background: linear-gradient(135deg, #a777e3, #6e8efb);
 }
+
 .blog-post {
   max-width: 850px;
   margin: 0 auto;
   padding: 40px 20px;
   line-height: 1.75;
-  font-size: 1rem; /* slightly smaller but readable */
+  font-size: 1rem;
   color: #111;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
+
 .blog-post h2 {
-  font-size: 1.6rem; /* was 1.8rem */
+  font-size: 1.6rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: #111;
   border-left: 4px solid #6c5ce7;
   padding-left: 10px;
 }
+
+.blog-post h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #222;
+  font-weight: 600;
+}
+
 .blog-post ul {
   list-style-type: disc;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+.blog-post ol {
   margin-left: 1.5rem;
   padding-left: 1rem;
 }
@@ -979,34 +798,22 @@ html, body {
 .blog-post p {
   margin-bottom: 1.5rem;
 }
-/* pull quotes / highlight boxes */
+
+.blog-post hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
 .pull-quote {
   border-left: 4px solid #6c5ce7;
   padding-left: 12px;
   margin: 20px 0;
   font-style: italic;
   color: #444;
-  font-size: 0.95rem; /* slightly smaller */
+  font-size: 0.95rem;
 }
 
-
-/* responsive typography */
-@media (max-width: 768px) {
-  .blog-post {
-    padding: 24px 16px;
-    font-size: 0.95rem; /* smaller for mobile */
-  }
-
-  .blog-post h2 {
-    font-size: 1.4rem;
-  }
-
-  .pull-quote {
-    font-size: 0.9rem;
-  }
-}
-
-/* ===== BACK TO BLOG BUTTON ===== */
 .blog-back-btn {
   display: inline-block;
   margin-top: 24px;
@@ -1026,155 +833,203 @@ html, body {
   background: linear-gradient(135deg, #a777e3, #6e8efb);
 }
 
-/* ===== HERO OVERRIDE FOR BLOG1 ===== */
-.hero-framed {
-  background: url("assets/img/Blog1_img/CoverPage.jpg") center/cover no-repeat;
-  background-size: cover;
+/* ===== BLOG1 SPECIFIC HERO ===== */
+body.blog1-page .hero-framed {
+  background: url("assets/img/Blog1_img/CoverPage.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
 }
 
-.hero-overlay-card {
-  background: rgba(255, 255, 255, 0.92);
-  padding: 36px 48px;
-  border-radius: 16px;
-  max-width: 650px;
+/* ===== BLOG2 SPECIFIC HERO ===== */
+body.blog2-page .hero-framed {
+  background: url("assets/img/Workspace Illustration.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
+
+/* ===== FLOWCHART IMAGE STYLING ===== */
+.flowchart-image {
   text-align: center;
-}
-
-.hero-overlay-card .headline {
-  font-size: clamp(28px, 5vw, 46px);
-}
-
-.hero-overlay-card .subline {
-  font-size: 1.05rem;
-  margin-bottom: 24px;
-}
-/* =========================
-   MOBILE RESPONSIVE STYLES
-   ========================= */
-   
-/* General breakpoints */
-@media (max-width: 1024px) {
-  /* Hero Section */
-  .hero-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-image {
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-text .headline {
-    font-size: 2rem;
-  }
-
-  .hero-text .subline {
-    font-size: 1rem;
-  }
-
-  .hero-ctas a.btn {
-    display: block;
-    width: 80%;
-    margin: 0.5rem auto;
-  }
-
-  /* Blog Cards */
-  .blog-listing,
-  .services-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .blog-card,
-  .service-card {
-    width: 100%;
-  }
-
-  .blog-card img,
-  .service-card img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Forms */
-  form .field input,
-  form .field textarea {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  /* Footer spacing */
-  .site-footer {
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-    text-align: center;
-  }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-  .hero-text .headline {
-    font-size: 1.5rem;
-  }
-
-  .hero-text .subline {
-    font-size: 0.9rem;
-  }
-
-  .hero-ctas a.btn {
-    width: 90%;
-    font-size: 0.9rem;
-  }
-
-  .pull-quote {
-    font-size: 0.95rem;
-    margin: 1rem 0;
-  }
-
-  .blog-post p,
-  .blog-post li {
-    font-size: 0.95rem;
-  }
-  
-  .divider-card {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .modal-content {
-    max-width: 95%;
-    padding: 1rem;
-  }
-}
-
-/* Ensure images in blog posts scale properly */
-.blog-post img {
+  margin: 2rem auto;
   max-width: 100%;
-  height: auto;
 }
 
-/* Optional: stack hero brand / photo on very narrow screens */
-@media (max-width: 360px) {
+.flowchart-image img {
+  max-width: 70%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+  .hero-inner {
+    transform: none !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+  
+  .hero {
+    min-height: auto !important;
+    padding: 30px 20px !important;
+  }
+  
+  .hero-image {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
   .hero-brand {
-    font-size: 1.2rem;
-    line-height: 1.3;
+    text-align: center !important;
+    padding-right: 0 !important;
+    font-size: 20px !important;
+    display: block !important;
+  }
+  
+  .photo-frame {
+    display: block !important;
+    margin: 0 auto !important;
   }
   
   .photo-frame img {
-    width: 80%;
+    width: 250px !important;
+  }
+  
+  .hero-text {
+    min-width: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    flex: none !important;
+  }
+  
+  .headline {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 16px !important;
+    word-break: break-word !important;
+  }
+  
+  .subline,
+  .mission {
+    font-size: 14px !important;
+  }
+  
+  .hero-ctas {
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 20px auto 0 !important;
+  }
+  
+  .hero-ctas .btn {
+    width: 100% !important;
+    display: block !important;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+  }
+  
+  #about {
+    padding: 50px 20px !important;
+  }
+  
+  #about h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  #about .bio {
+    font-size: 0.95rem !important;
+  }
+  
+  .services-grid {
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .service-card {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    min-height: 200px !important;
+  }
+  
+  .service-card img {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .blog-listing {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .contact-card .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .contact-card {
+    padding: 20px 16px !important;
+  }
+  
+  .hero-framed {
+    min-height: 50vh !important;
+    padding: 30px 20px !important;
+  }
+  
+  .hero-overlay-card {
+    padding: 30px 24px !important;
+    max-width: 90% !important;
+  }
+  
+  .hero-overlay-card .headline {
+    font-size: 28px !important;
+  }
+  
+  .blog-post {
+    padding: 30px 20px !important;
+    font-size: 0.95rem !important;
+  }
+  
+  .blog-post h2 {
+    font-size: 1.4rem !important;
+  }
+  
+  .flowchart-image img {
+    max-width: 95% !important;
   }
 }
 
-
-
-
-
-
-
+@media (max-width: 768px) {
+  body {
+    font-size: 15px !important;
+  }
+  
+  .hero {
+    padding: 20px 16px !important;
+  }
+  
+  .hero-brand {
+    font-size: 18px !important;
+  }
+  
+  .photo-frame img {
+    width: 200px !important;
+  }
+  
+  .headline {
+    font-size: 24px !important;
+     line-height: 1.2 !important;
+  }
+}
