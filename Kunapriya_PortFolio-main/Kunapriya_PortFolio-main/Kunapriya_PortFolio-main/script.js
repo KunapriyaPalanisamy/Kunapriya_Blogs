@@ -196,4 +196,30 @@ function showRecentBlog() {
 
 // Call the function on page load
 document.addEventListener('DOMContentLoaded', showRecentBlog);
+// Simulate fetching latest blog post
+const latestBlog = {
+  title: "Rewrite Your Resume to Reflect Who You Are Becoming",
+  description: "Your resume isn't a record of what you've done — it's a reflection of where you're heading...",
+  image: "assets/img/Resume Writing.jpg",
+  link: "blog3.html"
+};
+
+const blogContainer = document.getElementById("latest-blog");
+
+if (blogContainer) {
+  const blogCard = document.createElement("a");
+  blogCard.href = latestBlog.link;
+  blogCard.className = "blog-preview";
+  blogCard.innerHTML = `
+    <img src="${latestBlog.image}" alt="${latestBlog.title}">
+    <div class="blog-info">
+      <h3>${latestBlog.title}</h3>
+      <p>${latestBlog.description}</p>
+      <span>Read More →</span>
+    </div>
+  `;
+  blogContainer.appendChild(blogCard);
+}
+
+
 
