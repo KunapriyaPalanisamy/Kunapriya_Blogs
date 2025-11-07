@@ -198,10 +198,10 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Rewrite Your Resume to Reflect Who You Are Becoming",
-  description: "Your resume isn't a record of what you've done — it's a reflection of where you're heading...",
-  image: "assets/img/Resume Writing.jpg",
-  link: "blog3.html"
+  title: "LinkedIn Isn’t a Stage — It’s a Space to Express",
+  description: "Building an authentic brand starts with showing up — not for attention, but with intention...",
+  image: "assets/img/LinkedIn.jpg",
+  link: "blog4.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");

@@ -1033,3 +1033,102 @@ body.blog2-page .hero-framed {
      line-height: 1.2 !important;
   }
 }
+body.blog3-page .hero-framed {
+  background: url("assets/img/Resume Writing.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
+/* ==== Blog Section ==== */
+/* =========================================
+   Blog Section (Typography Aligned with "Work With Me")
+========================================= */
+.blog-section {
+  background: #fdfdfd;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.blog-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.blog-section .section-subline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+/* Layout container */
+.blog-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Single clean card */
+.blog-preview {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 800px;
+  width: 100%;
+}
+
+.blog-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Blog image (smaller, balanced) */
+.blog-preview img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* Blog text info */
+.blog-info {
+  padding: 1.5rem 2rem;
+  text-align: left;
+}
+
+.blog-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+  color: #111;
+  line-height: 1.3;
+}
+
+.blog-info p {
+  font-family: 'Inter', sans-serif;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.blog-info span {
+  font-family: 'Inter', sans-serif;
+  color: #0077cc;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+/* ===== BLOG4 SPECIFIC HERO ===== */
+body.blog4-page .hero-framed {
+  background: url("assets/img/LinkedIn.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
+
