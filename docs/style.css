@@ -1126,4 +1126,9 @@ body.blog3-page .hero-framed {
   font-weight: 600;
   font-size: 0.95rem;
 }
+/* ===== BLOG4 SPECIFIC HERO ===== */
+body.blog4-page .hero-framed {
+  background: url("assets/img/LinkedIn.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
 
