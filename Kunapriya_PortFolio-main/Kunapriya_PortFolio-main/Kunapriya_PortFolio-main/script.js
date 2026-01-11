@@ -198,10 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "LinkedIn Isn’t a Stage — It’s a Space to Express",
-  description: "Building an authentic brand starts with showing up — not for attention, but with intention...",
-  image: "assets/img/LinkedIn.jpg",
-  link: "blog4.html"
+  title: "Not Everyone Is Meant to Be a Developer — And That’s Okay",
+  description:
+    "Freshers often think growth equals development. In reality, tech thrives on different thinking styles — systems, quality, data, security, and reliability. This post breaks down major tech domains to help you choose intentionally.",
+  image: "assets/img/SoftwareDomain.jpg",
+  link: "blog5.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
