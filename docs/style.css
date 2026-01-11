@@ -1131,4 +1131,8 @@ body.blog4-page .hero-framed {
   background: url("assets/img/LinkedIn.jpg") center/cover no-repeat !important;
   background-size: cover !important;
 }
+body.blog5-page .hero-framed {
+  background: url("assets/img/SoftwareDomain.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
 
