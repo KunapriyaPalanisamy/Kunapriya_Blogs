@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Not Everyone Is Meant to Be a Developer — And That’s Okay",
+  title: "Mail Etiquette: A Skill No One Teaches, Yet Everyone Judges",
   description:
-    "Freshers often think growth equals development. In reality, tech thrives on different thinking styles — systems, quality, data, security, and reliability. This post breaks down major tech domains to help you choose intentionally.",
-  image: "assets/img/SoftwareDomain.jpg",
-  link: "blog5.html"
+    "Your emails often speak before your work does. This post breaks down practical workplace email etiquette — clarity, tone, follow-ups, and common mistakes that silently shape professional perception.",
+  image: "assets/img/EmailEtiquette.jpg",
+  link: "blog6.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
