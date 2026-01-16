@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Mail Etiquette: A Skill No One Teaches, Yet Everyone Judges",
+  title: "Understanding APIs: How Modern Software Systems Communicate",
   description:
-    "Your emails often speak before your work does. This post breaks down practical workplace email etiquette — clarity, tone, follow-ups, and common mistakes that silently shape professional perception.",
-  image: "assets/img/EmailEtiquette.jpg",
-  link: "blog6.html"
+    "APIs quietly power how applications talk to each other. This post explains APIs as system contracts — why design, reliability, and evolution matter more than endpoints, and how API literacy builds a strong system-thinking mindset.",
+  image: "assets/img/API.jpg",
+  link: "blog7.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
