@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Understanding APIs: How Modern Software Systems Communicate",
+  title: "Before Writing Code: How Projects Are Really Analyzed",
   description:
-    "APIs quietly power how applications talk to each other. This post explains APIs as system contracts — why design, reliability, and evolution matter more than endpoints, and how API literacy builds a strong system-thinking mindset.",
-  image: "assets/img/API.jpg",
-  link: "blog7.html"
+    "Before a single line of code is written, projects are shaped by analysis, alignment, and groundwork. Based on real project experience, this post breaks down what teams do in the early stages — from understanding the problem to collaboration across roles — and why this phase quietly decides success.",
+  image: "assets/img/Project_Requirement.jpg",
+  link: "blog8.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");

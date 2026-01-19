@@ -1144,3 +1144,7 @@ body.blog7-page .hero-framed {
   background: url("assets/img/API.jpg") center/cover no-repeat !important;
   background-size: cover !important;
 }
+body.blog8-page .hero-framed {
+  background: url("assets/img/Project_Requirement.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
