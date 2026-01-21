@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Before Writing Code: How Projects Are Really Analyzed",
+  title: "Assigned Work vs Responsible Work: The Difference That Changes Careers",
   description:
-    "Before a single line of code is written, projects are shaped by analysis, alignment, and groundwork. Based on real project experience, this post breaks down what teams do in the early stages — from understanding the problem to collaboration across roles — and why this phase quietly decides success.",
-  image: "assets/img/Project_Requirement.jpg",
-  link: "blog8.html"
+    "Doing what is assigned keeps work moving. Taking responsibility brings work to closure. Based on a real early-career experience in a support project, this post explores the subtle but powerful shift from task ownership to outcome ownership — and how it quietly shapes trust, growth, and career trajectory.",
+  image: "assets/img/PersonalExperience.jpg",
+  link: "blog9.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
