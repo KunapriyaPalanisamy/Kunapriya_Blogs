@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Small Changes Break Big Systems</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="blog11-page">
+
+  <!-- ===== BLOG HERO ===== -->
+  <section class="hero hero-framed">
+    <div class="hero-overlay-card">
+      <h1 class="headline">Why Small Changes Break Big Systems</h1>
+      <p class="subline">
+        How tiny edits trigger failures in complex software.
+      </p>
+      <a href="blog.html" class="blog-back-btn">Back to Blog</a>
+    </div>
+  </section>
+
+  <!-- ===== BLOG CONTENT ===== -->
+  <section class="section">
+    <div class="inner blog-post">
+
+      <p><em>
+        This blog is based on patterns commonly seen in real-world systems where small changes unexpectedly lead to major failures.
+        It explores why software behaves this way and what engineers can learn from it.
+      </em></p>
+
+      <hr>
+
+      <h2>🧠 The Illusion: “It’s Just a Minor Change”</h2>
+      <p>
+        When engineers modify a single line of code or adjust a small configuration, it feels safe because the change looks limited.
+        We judge impact by how much code we touch, not by how many connections that code has.
+      </p>
+
+      <p>
+        Modern software is not a single program but a network of services, databases, and integrations.
+        A small change in one place can travel through these connections and alter behavior elsewhere.
+      </p>
+
+      <ul>
+        <li>Developers measure change by code size, but systems react based on dependencies.</li>
+        <li>A tiny edit can create large effects when many components rely on it.</li>
+      </ul>
+
+      <hr>
+
+      <h2>🔗 Systems Are Full of Hidden Dependencies</h2>
+      <p>
+        Most systems depend on assumptions that are never written down.
+        One service may assume a field is always present, while another assumes it can be missing.
+        These silent agreements work until a change breaks one of them.
+      </p>
+
+      <p>
+        When such an assumption fails, the error often appears far away from where the change was made,
+        making the cause difficult to identify.
+      </p>
+
+      <ul>
+        <li>Many failures come from broken assumptions between components.</li>
+        <li>These are contract failures, not simple coding mistakes.</li>
+      </ul>
+
+      <hr>
+
+      <h2>📦 Assumptions Travel Farther Than Code</h2>
+      <p>
+        Every layer of a system builds expectations about the layers below it.
+        Data formats, response timing, and error handling rules propagate from the database to the API and finally to the user interface.
+      </p>
+
+      <p>
+        When one layer changes without the others adapting, the system continues to run until those assumptions collapse,
+        often causing failures in unexpected locations.
+      </p>
+
+      <ul>
+        <li>Code changes locally, but assumptions spread across the system.</li>
+        <li>Bugs surface where assumptions finally break.</li>
+      </ul>
+
+      <hr>
+
+      <h2>📈 Scale Changes the Meaning of “Small”</h2>
+      <p>
+        At low usage, small delays or retries seem harmless.
+        At high usage, the same behavior multiplies into serious performance and reliability issues.
+      </p>
+
+      <p>
+        The code itself may not change, but the environment becomes more demanding as users and data increase.
+        What once looked safe can become risky under load.
+      </p>
+
+      <ul>
+        <li>Low-scale safety does not guarantee high-scale stability.</li>
+        <li>Impact depends more on context than on code size.</li>
+      </ul>
+
+      <hr>
+
+      <h2>🕰️ Systems Carry Their History</h2>
+      <p>
+        Software systems evolve over time and accumulate legacy rules, temporary fixes, and old data patterns.
+        New changes must operate within this existing structure, even if it is no longer fully understood.
+      </p>
+
+      <p>
+        A feature that looks correct today can conflict with decisions made years earlier,
+        leading to failures that seem mysterious.
+      </p>
+
+      <ul>
+        <li>New reminders interact with old behavior.</li>
+        <li>Past decisions still shape current stability.</li>
+      </ul>
+
+      <hr>
+
+      <h2>⚠️ The Hidden Cost of “Quick Fixes”</h2>
+      <p>
+        When something breaks in production, pressure pushes teams to act fast.
+        The focus becomes restoring service rather than understanding the root cause.
+      </p>
+
+      <p>
+        Over time, repeated quick fixes increase complexity and make the system harder to reason about.
+        Each fix solves a symptom while quietly adding technical risk.
+      </p>
+
+      <ul>
+        <li>Quick fixes reduce short-term pain but increase long-term fragility.</li>
+        <li>Complexity grows when causes are patched instead of solved.</li>
+      </ul>
+
+      <hr>
+
+      <h2>📊 The Career Insight</h2>
+      <p>
+        Early in a career, engineers tend to look for the exact line of code that caused a failure.
+        With experience, attention shifts to how the system allowed the failure to happen.
+      </p>
+
+      <p>
+        This change in thinking marks the transition from writing code to understanding systems.
+      </p>
+
+      <ul>
+        <li>Debugging moves from code-level to system-level reasoning.</li>
+        <li>Growth comes from understanding behavior, not just logic.</li>
+      </ul>
+
+      <hr>
+
+      <h2>✨ Final Thought</h2>
+      <p>
+        Small changes break big systems because software is not just a collection of functions.
+        It is a network of assumptions, decisions, and history operating at scale.
+      </p>
+
+      <p>
+        Code is where failure appears.
+        Systems are where failure is born.
+      </p>
+
+      <p>
+        Learning to think in systems helps engineers build software that does not just work today,
+        but survives tomorrow.
+      </p>
+
+      <hr>
+
+      <p><em>Part of my Early Career Playbook — sharing practical software lessons beyond just writing code.</em></p>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    © 2025 Priya — Structured Thoughts, Purposeful Tech
+  </footer>
+
+  <script src="blog.js"></script>
+</body>
+</html>
