@@ -1152,5 +1152,9 @@ body.blog9-page .hero-framed {
   background: url("assets/img/PersonalExperience.jpg") center/cover no-repeat !important;
   background-size: cover !important;
 }
+body.blog11-page .hero-framed {
+  background: url("assets/img/BigSystems.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
 
 

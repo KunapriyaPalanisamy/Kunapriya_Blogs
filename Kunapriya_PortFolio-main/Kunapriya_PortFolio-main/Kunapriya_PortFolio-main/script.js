@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Assigned Work vs Responsible Work: The Difference That Changes Careers",
+  title: "Why Small Changes Break Big Systems",
   description:
-    "Doing what is assigned keeps work moving. Taking responsibility brings work to closure. Based on a real early-career experience in a support project, this post explores the subtle but powerful shift from task ownership to outcome ownership — and how it quietly shapes trust, growth, and career trajectory.",
-  image: "assets/img/PersonalExperience.jpg",
-  link: "blog9.html"
+    "A look into why minor changes can trigger major failures in software systems. This post explores how assumptions, scale, and quick fixes quietly increase fragility — and why understanding systems, not just code, is key to building software that survives change.",
+  image: "assets/img/BigSystems.jpg",
+  link: "blog11.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
