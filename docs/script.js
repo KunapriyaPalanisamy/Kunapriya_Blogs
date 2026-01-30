@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Why Small Changes Break Big Systems",
+  title: "What No One Tells You About Speaking in Technical Meetings",
   description:
-    "A look into why minor changes can trigger major failures in software systems. This post explores how assumptions, scale, and quick fixes quietly increase fragility — and why understanding systems, not just code, is key to building software that survives change.",
-  image: "assets/img/BigSystems.jpg",
-  link: "blog11.html"
+    "Technical meetings are not driven by subject knowledge alone. This post reflects on how clarity, preparation, and purpose shape real influence in technical discussions — and why communication in these spaces is as critical as technical skill itself.",
+  image: "assets/img/TechMeeting.jpg",
+  link: "blog12.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
