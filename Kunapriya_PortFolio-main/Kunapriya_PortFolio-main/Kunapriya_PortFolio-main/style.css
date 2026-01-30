@@ -1156,5 +1156,9 @@ body.blog11-page .hero-framed {
   background: url("assets/img/BigSystems.jpg") center/cover no-repeat !important;
   background-size: cover !important;
 }
+body.blog12-page .hero-framed {
+  background: url("assets/img/TechMeeting.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
 
 
