@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "What No One Tells You About Speaking in Technical Meetings",
+  title: "Why AI Still Needs Human Judgment",
   description:
-    "Technical meetings are not driven by subject knowledge alone. This post reflects on how clarity, preparation, and purpose shape real influence in technical discussions — and why communication in these spaces is as critical as technical skill itself.",
-  image: "assets/img/TechMeeting.jpg",
-  link: "blog12.html"
+    "AI can process data and detect patterns faster than humans, but it cannot understand context, ethics, or intent. This post explores why human judgment is still essential in an AI-driven world — and how real intelligence comes from combining machine efficiency with human insight.",
+  image: "assets/img/AI.jpg",
+  link: "blog13.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
