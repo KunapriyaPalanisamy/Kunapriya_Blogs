@@ -1164,5 +1164,17 @@ body.blog13-page .hero-framed {
   background: url("assets/img/AI.jpg") center/cover no-repeat !important;
   background-size: cover !important;
 }
+body.blog14-page .hero-framed {
+  background: url("assets/img/Microservices.jpg") center/cover no-repeat !important;
+  background-size: cover !important;
+}
+.blog-diagram {
+  display: block;
+  max-width: 60%;     /* controls size */
+  height: auto;
+  margin: 2rem auto; /* centers it */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
 
 
