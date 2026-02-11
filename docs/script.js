@@ -198,11 +198,11 @@ function showRecentBlog() {
 document.addEventListener('DOMContentLoaded', showRecentBlog);
 // Simulate fetching latest blog post
 const latestBlog = {
-  title: "Why AI Still Needs Human Judgment",
+  title: "Understanding Microservices: Breaking Apps Into Smart Services",
   description:
-    "AI can process data and detect patterns faster than humans, but it cannot understand context, ethics, or intent. This post explores why human judgment is still essential in an AI-driven world — and how real intelligence comes from combining machine efficiency with human insight.",
-  image: "assets/img/AI.jpg",
-  link: "blog13.html"
+    "Microservices architecture breaks large applications into smaller, independent services that can be developed, deployed, and scaled separately. This post explains what microservices really mean, how they change system design, and when they make sense beyond just theory.",
+  image: "assets/img/Microservices.jpg",
+  link: "blog14.html"
 };
 
 const blogContainer = document.getElementById("latest-blog");
